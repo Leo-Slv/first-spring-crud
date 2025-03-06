@@ -35,9 +35,6 @@ public class User {
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Account> accounts;
 
-    public User() {
-    }
-
     public User (UUID id, String name, String email, String password, Instant creationTimestamp, Instant updatedTimestamp){
         this.id = id;
         this.name = name;

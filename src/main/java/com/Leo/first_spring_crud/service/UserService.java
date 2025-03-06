@@ -38,13 +38,13 @@ public class UserService {
 
     public UUID createUser(CreateUserDto createUserDto){
 
-        var Entitiy = new User(UUID.randomUUID(),
+        var Entity = new User(UUID.randomUUID(),
                 createUserDto.name(),
                 createUserDto.email(),
                 createUserDto.password(),
                 Instant.now(),
                 null);
-        var UserSaved = userRepository.save(Entitiy);
+        var UserSaved = userRepository.save(Entity);
 
         return UserSaved.getId();
     }
